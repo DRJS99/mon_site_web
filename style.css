@@ -1,4 +1,4 @@
-
+/* STYLE GLOBAL DU DOCUMENT */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,6 +7,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* HEADER PRINCIPAL */
 header {
     background: #333;
     color: #fff;
@@ -14,6 +15,7 @@ header {
     padding: 1rem 0;
 }
 
+/* SECTIONS PRINCIPALES */
 section {
     padding: 20px;
     margin: 20px auto;
@@ -23,6 +25,7 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* LISTES */
 ul {
     list-style: none;
     padding: 0;
@@ -35,6 +38,7 @@ ul li {
     border-radius: 5px;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     background: #333;
@@ -42,7 +46,7 @@ footer {
     padding: 10px 0;
 }
 
-
+/* FORMULAIRE */
 form {
     display: flex;
     flex-direction: column;
@@ -54,7 +58,7 @@ form {
 form label {
     font-size: 16px;
     margin-bottom: 8px;
-    text-align: left; 
+    text-align: left; /* Assure l'alignement à gauche des labels */
     width: 100%;
 }
 
@@ -78,7 +82,7 @@ form button:hover {
     background: #555;
 }
 
-<<<<<<< HEAD
+/* SECTION TECHNOLOGIES */
 #technologies {
     width: 100%;
     padding: 20px;
@@ -92,45 +96,63 @@ form button:hover {
 
 .tech-slider {
     display: flex;
-    overflow-x: auto; /* Permet le défilement horizontal */
-    scroll-snap-type: x mandatory; /* Pour un défilement fluide */
+    overflow-x: auto; /* Ajout du défilement horizontal */
     gap: 15px; /* Espacement entre les éléments */
-    padding-bottom: 10px; /* Pour avoir de l'espace sous les images */
-    width: 50vw; /* Prend la moitié de l'écran */
+    padding-bottom: 10px;
+    width: 100%;  
     margin: 0 auto;
-    scrollbar-width: thin; /* Apparence de la barre de défilement */
+    scrollbar-width: thin; /* Design des barres de défilement */
+    -ms-overflow-style: none;  
+}
+
+.tech-slider::-webkit-scrollbar {
+    height: 8px; /* Hauteur de la barre */
+}
+
+.tech-slider::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px; /* Coins arrondis */
 }
 
 .tech-item {
-    flex-shrink: 0; /* Empêche l'élément de rétrécir */
-    width: 120px; /* Largeur fixe pour chaque élément */
+    flex-shrink: 0;
+    width: 150px; /* Largeur des items */
     text-align: center;
-    scroll-snap-align: start; /* Pour aligner les éléments au début */
+    position: relative; /* Nécessaire pour positionner l'info-bulle */
 }
 
 .tech-item img {
-    width: 100%; /* L'image prend toute la largeur de son conteneur */
-    height: 100px; /* Conserve les proportions de l'image */
-    object-fit: contain; /* Assure que l'image reste à l'intérieur de la boîte sans distorsion */
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
     margin-bottom: 10px;
 }
 
-.tech-item p {
-    margin-top: 8px;
-    font-size: 14px; /* Taille de la police plus petite */
-    color: #333;
+/* INFO-BULLES (TOOLTIP) */
+.tooltip {
+    visibility: hidden; /* Utilise visibility plutôt que display pour éviter le "repaint" */
+    opacity: 0; /* Rend l'info-bulle invisible avec une transition */
+    background-color: rgba(0, 0, 0, 0.75); /* Fond semi-transparent noir */
+    color: #fff; /* Texte blanc */
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 10px; /* Ajoute un peu de largeur */
+    position: absolute;
+    top: 50%; /* Centre vertical */
+    left: 50%; /* Centre horizontal */
+    transform: translate(-50%, -50%); /* Centrage parfait */
+    z-index: 100; /* Assure que l'info-bulle passe au-dessus */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Animation fluide */
+    font-size: x-small;
 }
 
-@media (max-width: 768px) {
-    .tech-slider {
-        width: 100vw; /* Si l'écran est plus petit, prend la largeur complète de l'écran */
-    }
+/* Affichage lors du survol */
+.tech-item:hover .tooltip {
+    visibility: visible; /* Rend visible */
+    opacity: 1; /* Applique l'animation */
 }
 
-
-=======
->>>>>>> 3dec71b0675c046d66d63e2f63388cdf52cd3160
-/* Responsiv */
+/* STYLES POUR ÉCRANS PETITS */
 @media (max-width: 768px) {
     form {
         padding: 10px;
@@ -154,3 +176,4 @@ form button:hover {
         margin-top: 10px;
     }
 }
+
