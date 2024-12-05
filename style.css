@@ -1,0 +1,153 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #e7e7e7;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: left; 
+    width: 100%;
+}
+
+form input, form textarea, form button {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+#technologies {
+    width: 100%;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.tech-container {
+    display: flex;
+    justify-content: center;
+}
+
+.tech-slider {
+    display: flex;
+    overflow-x: auto; /* Permet le défilement horizontal */
+    scroll-snap-type: x mandatory; /* Pour un défilement fluide */
+    gap: 15px; /* Espacement entre les éléments */
+    padding-bottom: 10px; /* Pour avoir de l'espace sous les images */
+    width: 50vw; /* Prend la moitié de l'écran */
+    margin: 0 auto;
+    scrollbar-width: thin; /* Apparence de la barre de défilement */
+}
+
+.tech-item {
+    flex-shrink: 0; /* Empêche l'élément de rétrécir */
+    width: 120px; /* Largeur fixe pour chaque élément */
+    text-align: center;
+    scroll-snap-align: start; /* Pour aligner les éléments au début */
+}
+
+.tech-item img {
+    width: 100%; /* L'image prend toute la largeur de son conteneur */
+    height: 100px; /* Conserve les proportions de l'image */
+    object-fit: contain; /* Assure que l'image reste à l'intérieur de la boîte sans distorsion */
+    margin-bottom: 10px;
+}
+
+.tech-item p {
+    margin-top: 8px;
+    font-size: 14px; /* Taille de la police plus petite */
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .tech-slider {
+        width: 100vw; /* Si l'écran est plus petit, prend la largeur complète de l'écran */
+    }
+}
+
+
+/* Responsiv */
+@media (max-width: 768px) {
+    form {
+        padding: 10px;
+    }
+
+    form label {
+        font-size: 14px;
+        text-align: left; 
+    }
+
+    form input, form textarea {
+        font-size: 12px;
+        padding: 10px;
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    form button {
+        font-size: 14px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
