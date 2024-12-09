@@ -1,4 +1,4 @@
-/* STYLE GLOBAL DU DOCUMENT */
+/* Style global de la page */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,7 +7,7 @@ body {
     background-color: #f4f4f4;
 }
 
-/* HEADER PRINCIPAL */
+/* HEADER  */
 header {
     background: #333;
     color: #fff;
@@ -58,7 +58,7 @@ form {
 form label {
     font-size: 16px;
     margin-bottom: 8px;
-    text-align: left; /* Assure l'alignement à gauche des labels */
+    text-align: left; 
     width: 100%;
 }
 
@@ -96,29 +96,29 @@ form button:hover {
 
 .tech-slider {
     display: flex;
-    overflow-x: auto; /* Ajout du défilement horizontal */
-    gap: 15px; /* Espacement entre les éléments */
+    overflow-x: auto; 
+    gap: 15px; 
     padding-bottom: 10px;
     width: 100%;  
     margin: 0 auto;
-    scrollbar-width: thin; /* Design des barres de défilement */
+    scrollbar-width: thin; 
     -ms-overflow-style: none;  
 }
 
 .tech-slider::-webkit-scrollbar {
-    height: 8px; /* Hauteur de la barre */
+    height: 8px; 
 }
 
 .tech-slider::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px; /* Coins arrondis */
+    border-radius: 10px; 
 }
 
 .tech-item {
     flex-shrink: 0;
-    width: 150px; /* Largeur des items */
+    width: 150px; 
     text-align: center;
-    position: relative; /* Nécessaire pour positionner l'info-bulle */
+    position: relative; 
 }
 
 .tech-item img {
@@ -128,31 +128,33 @@ form button:hover {
     margin-bottom: 10px;
 }
 
-/* INFO-BULLES (TOOLTIP) */
+/* info bulle */
+
 .tooltip {
-    visibility: hidden; /* Utilise visibility plutôt que display pour éviter le "repaint" */
-    opacity: 0; /* Rend l'info-bulle invisible avec une transition */
-    background-color: rgba(0, 0, 0, 0.75); /* Fond semi-transparent noir */
-    color: #fff; /* Texte blanc */
+    visibility: hidden; 
+    opacity: 0; 
+    background-color: rgba(0, 0, 0, 0.75); 
+    color: #fff; 
     text-align: center;
     border-radius: 5px;
-    padding: 5px 10px; /* Ajoute un peu de largeur */
+    padding: 5px 10px; 
     position: absolute;
-    top: 50%; /* Centre vertical */
-    left: 50%; /* Centre horizontal */
-    transform: translate(-50%, -50%); /* Centrage parfait */
-    z-index: 100; /* Assure que l'info-bulle passe au-dessus */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Animation fluide */
-    font-size: x-small;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 100; 
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+    font-size: 7px;
+    font-weight: bold;
 }
 
-/* Affichage lors du survol */
+/* survol */
 .tech-item:hover .tooltip {
-    visibility: visible; /* Rend visible */
-    opacity: 1; /* Applique l'animation */
-}
+    visibility: visible; 
+    opacity: 1; 
+} 
 
-/* STYLES POUR ÉCRANS PETITS */
+/* responsiv*/
 @media (max-width: 768px) {
     form {
         padding: 10px;
