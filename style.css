@@ -24,6 +24,7 @@ section {
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 /* LISTES */
@@ -107,7 +108,7 @@ form button:hover {
 }
 
 .tech-slider::-webkit-scrollbar {
-    height: 8px; 
+    height: 3px; 
 }
 
 .tech-slider::-webkit-scrollbar-thumb {
